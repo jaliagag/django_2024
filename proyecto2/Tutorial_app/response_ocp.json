@@ -1,0 +1,39 @@
+{
+    "apiVersion": "v1",
+    "kind": "List",
+    "metadata": {
+      "selfLink": "/api/v1/namespaces/myproject/pods"
+    },
+    "items": [
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "name": "my-pod-name",
+          "namespace": "myproject"
+        },
+        "spec": {
+          "containers": [
+            {
+              "image": "my-image:latest",
+              "name": "my-container-name"
+            }
+          ]
+        },
+        "status": {
+          "containerStatuses": [
+            {
+              "image": "my-image:latest",
+              "imageID": "...",
+              "name": "my-container-name",
+              "ready": true,
+              "restartCount": 0,
+              "state": "Running"
+            }
+          ],
+          "phase": "Running"
+        }
+      }
+    ]
+}
+  

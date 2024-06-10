@@ -2,5 +2,26 @@
 {% load static %}
 {% block contenidoQueCambia %}
 <h1>INICIO</h1>
-echo {{ nombre }}
+
+{{ json.items.0.metadata.name }}
+
+<details>
+    <summary>Epcot Center</summary>
+    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details>
+
+
+<table>
+    <tbody>
+        {% for i in data %}
+            <tr>
+            {% for g in i %}
+                <td>{{ g }}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+DEBUG: {{ data }}
 {% endblock %}
